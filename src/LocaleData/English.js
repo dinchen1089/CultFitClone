@@ -118,4 +118,16 @@ export const English = {
     'If big fitness goal are overwhelming, start small. The import word here is "start".',
   GET_BACK_TO_FITNESS: 'GET BACK TO FITNESS!',
   IT_HAS_BEEN_WHILE_TEXT: "It's been a while and it's alright",
+  DOWNLOADED_SESSIONS_LABEL_1:
+    'Download sessions and stay fit anywhere, anytime without internet connectivity!',
+  DOWNLOADED_SESSIONS_LABEL_2: 'Just tap',
+  DOWNLOADED_SESSIONS_LABEL_3: 'while you are exploring on-demand sessions.',
+  MY_ACTIVITIES: 'My activities',
+  CULT_CENTER_CLASSES: 'Cult Center Classes',
+  PLAY_SESSIONS: 'Play Sessions',
+  GYM_WORKOUTS: 'Gym Workouts',
+  ONEPASS_SESSIONS: 'OnePass Sessions',
+  THERAPY_CONSULTATION: 'Therapy Consultation',
+  DIAGNOSTIC_TESTS: 'Diagnostic Tests',
+  STORE_ORDERS: 'Store Orders',
 };
