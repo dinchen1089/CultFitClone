@@ -184,10 +184,15 @@ const Profile = ({navigation}) => {
               />
               <PageNavigator leftlabel={English.LATEST_BMI} showIcon={true} />
               <PageNavigator leftlabel={English.CHALLANGES} showIcon={true} />
-              <PageNavigator leftlabel={English.MYHISTORY} showIcon={true} />
+              <PageNavigator
+                leftlabel={English.MYHISTORY}
+                showIcon={true}
+                componentName={'MyActivity'}
+              />
               <PageNavigator
                 leftlabel={English.DOWNLOADED_SESSIONS}
                 showIcon={true}
+                componentName={'DownloadSession'}
               />
             </View>
           )}

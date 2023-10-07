@@ -6339,6 +6339,11 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz"
   "version" "0.71.19"
 
+"react-native-linear-gradient@^2.8.3":
+  "integrity" "sha512-KflAXZcEg54PXkLyflaSZQ3PJp4uC4whM7nT/Uot9m0e/qxFV3p6uor1983D1YOBJbJN7rrWdqIjq0T42jOJyA=="
+  "resolved" "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.8.3.tgz"
+  "version" "2.8.3"
+
 "react-native-paper@^5.10.5", "react-native-paper@>= 3.0.0":
   "integrity" "sha512-vQiLS1V2M3HSqGpDPGmRs1LTZOToJrHytik71F7f6+1D1kz64+gTudmX2HfewQtt6u0QXUfMt+oRf3XXdIYF4Q=="
   "resolved" "https://registry.npmjs.org/react-native-paper/-/react-native-paper-5.10.5.tgz"
@@ -6348,10 +6353,10 @@
     "color" "^3.1.2"
     "use-latest-callback" "^0.1.5"
 
-"react-native-reanimated@>= 1.0.0":
-  "integrity" "sha512-zjGJL2rgYLiEqIwaIOd+/dgRZzot4wKUvKk0ZXeWY7SJg4Bp+9yQTOT98Jx6b1/Cga2YY71i0tIu3hanLajGAQ=="
-  "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.5.3.tgz"
-  "version" "3.5.3"
+"react-native-reanimated@^3.5.4", "react-native-reanimated@>= 1.0.0":
+  "integrity" "sha512-8we9LLDO1o4Oj9/DICeEJ2K1tjfqkJagqQUglxeUAkol/HcEJ6PGxIrpBcNryLqCDYEcu6FZWld/FzizBIw6bg=="
+  "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-3.5.4.tgz"
+  "version" "3.5.4"
   dependencies:
     "@babel/plugin-transform-object-assign" "^7.16.7"
     "@babel/preset-typescript" "^7.16.7"
