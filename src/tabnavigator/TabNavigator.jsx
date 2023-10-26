@@ -1,6 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
 
 import Fitness from '../screen/Fitness';
 import Home from '../screen/Home';
@@ -13,6 +11,8 @@ import HomeIcon from '../icons/HomeIcon';
 import SocialIcon from '../icons/SocialIcon';
 import SportsIcon from '../icons/SportsIcon';
 import StoreIcon from '../icons/StoreIcon';
+
+import ROUTES from '../LocaleData/routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,29 +30,28 @@ const TabNavigator = () => {
         tabBarInactiveTintColor: 'grey',
         tabBarLabelStyle: {fontSize: 13, paddingBottom: 5},
         tabBarIcon: ({focused, colour}) => {
-          if (route.name === 'Fitness') {
-            colour = focused ? 'white' : 'gray';
-            return <FitnessIcon color={colour} size={22} />;
-          } else if (route.name === 'Home') {
-            colour = focused ? 'white' : 'gray';
-            return <HomeIcon color={colour} size={22} />;
-          } else if (route.name === 'Social') {
-            colour = focused ? 'white' : 'gray';
-            return <SocialIcon color={colour} size={22} />;
-          } else if (route.name === 'Sports') {
-            colour = focused ? 'white' : 'gray';
-            return <SportsIcon color={colour} size={22} />;
-          } else {
-            colour = focused ? 'white' : 'gray';
-            return <StoreIcon color={colour} size={22} />;
+          colour = focused ? 'white' : 'gray';
+          switch (route.name) {
+            case ROUTES.FITNESS:
+              return <FitnessIcon color={colour} size={22} />;
+            case ROUTES.HOME:
+              return <HomeIcon color={colour} size={22} />;
+            case ROUTES.SOCIAL:
+              return <SocialIcon color={colour} size={22} />;
+            case ROUTES.SPORTS:
+              return <SportsIcon color={colour} size={22} />;
+            case ROUTES.STORE:
+              return <StoreIcon color={colour} size={22} />;
+            default:
+              return;
           }
         },
       })}>
-      <Tab.Screen name={'Home'} component={Home} />
-      <Tab.Screen name={'Fitness'} component={Fitness} />
-      <Tab.Screen name={'Sports'} component={Sports} />
-      <Tab.Screen name={'Store'} component={Store} />
-      <Tab.Screen name={'Social'} component={Social} />
+      <Tab.Screen name={ROUTES.HOME} component={Home} />
+      <Tab.Screen name={ROUTES.FITNESS} component={Fitness} />
+      <Tab.Screen name={ROUTES.SPORTS} component={Sports} />
+      <Tab.Screen name={ROUTES.STORE} component={Store} />
+      <Tab.Screen name={ROUTES.SOCIAL} component={Social} />
     </Tab.Navigator>
   );
 };
