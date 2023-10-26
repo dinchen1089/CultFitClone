@@ -1,16 +1,30 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  ScrollView,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
-
+import {ImageList} from '../component/slider_image/ImageList';
+import {HomeImageMap} from '../images/imageMap';
 const Home = ({navigation}) => {
+  const styles = StyleSheet.create({
+    page: {
+      flex: 1,
+      backgroundColor: '#000',
+    },
+  });
   return (
-    <View>
+    <ScrollView style={styles.page}>
+      <ImageList list={Object.values(HomeImageMap)} />
       <TouchableOpacity
         onPress={() => {
           navigation.navigate('Profile');
         }}>
-        <Text>Home</Text>
+        <Text>Go To Profile</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
