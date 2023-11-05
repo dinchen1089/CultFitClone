@@ -5,15 +5,15 @@
  * @format
  */
 
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import TabNavigator from './src/tabnavigator/TabNavigator';
+import { StatusBar, StyleSheet } from 'react-native';
 import MainComponent from './src/maincomponent/MainComponent';
-import {NavigationContainer} from '@react-navigation/native';
 
 function App() {
   return (
     <NavigationContainer>
+      <StatusBar translucent/>
       <MainComponent />
     </NavigationContainer>
   );
