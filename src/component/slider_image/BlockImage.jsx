@@ -1,31 +1,47 @@
-import {View, Image, StyleSheet} from 'react-native';
-
+import {View, StyleSheet, ImageBackground} from 'react-native';
+import BlockButton from './BlockButton';
 export const BlockImage = ({
-  size = {height: 400, width: 400},
-  path,
+  properties,
+  navigation,
+  link,
+  height,
+  width,
   ...otherProps
 }) => {
   const styles = StyleSheet.create({
     imgContainer: {
       flex: 1,
-      paddingHorizontal: 1,
-      width: '100%',
-      alignSelf: 'center',
       alignItems: 'center',
+      paddingHorizontal: 0,
+      marginHorizontal: 0,
     },
     img: {
-      ...size,
+      height,
+      width,
+      paddingHorizontal: 0,
+      marginHorizontal: 0,
+    },
+    bottomButton: {
+      flex: 1,
+      alignSelf: 'center',
+      justifyContent: 'flex-end',
+      alignItems: 'baseline',
     },
   });
   return (
     <View style={styles.imgContainer}>
-      <Image
+      <ImageBackground
         resizeMode="contain"
         resizeMethod="scale"
-        source={path}
+        source={properties.path}
         style={styles.img}
-        {...otherProps}
-      />
+        {...otherProps}>
+        {properties?.bottomButton && (
+          <View style={styles.bottomButton}>
+            <BlockButton properties={properties} navigation={navigation} />
+          </View>
+        )}
+      </ImageBackground>
     </View>
   );
 };

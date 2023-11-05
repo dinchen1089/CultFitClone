@@ -1,33 +1,27 @@
-import {
-  StyleSheet,
-  ScrollView,
-  Text,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
 import {ImageList} from '../component/slider_image/ImageList';
 import {HomeImageMap} from '../images/imageMap';
+import {ProfileButton} from '../component/ui_helpers/ProfileButton';
 const Home = ({navigation}) => {
   const styles = StyleSheet.create({
     page: {
       flex: 1,
       backgroundColor: '#000',
+      padding: 0,
+      margin: 0,
     },
   });
   return (
     <ScrollView style={styles.page}>
-      <ImageList list={Object.values(HomeImageMap)} />
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('Profile');
-        }}>
-        <Text>Go To Profile</Text>
-      </TouchableOpacity>
+      <ProfileButton />
+      <ImageList
+        list={Object.values(HomeImageMap)}
+        id={Math.random()}
+        navigation={navigation}
+      />
     </ScrollView>
   );
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});
