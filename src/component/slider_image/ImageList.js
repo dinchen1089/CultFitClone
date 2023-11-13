@@ -1,17 +1,19 @@
-import {
-  View,
-  FlatList,
-  Pressable,
-  StyleSheet,
-  useWindowDimensions,
-} from 'react-native';
+import {View, FlatList, StyleSheet} from 'react-native';
 import {useRef, useState} from 'react';
 import {BlockImage} from './BlockImage';
 import {BottomSlider} from './bottomSlider';
 
 //id must be a unique number
-export const ImageList = ({list, id, navigation}) => {
-  const {height, width} = useWindowDimensions();
+export const ImageList = ({
+  list,
+  id,
+  navigation,
+  height,
+  width,
+  imageStyle = {},
+  seperatorComponent = null,
+  animated = true,
+}) => {
   const [key, setKey] = useState(id);
   const listRef = useRef(null);
   const styles = StyleSheet.create({
@@ -39,25 +41,33 @@ export const ImageList = ({list, id, navigation}) => {
         showsVerticalScrollIndicator={false}
         horizontal={true}
         ref={listRef}
+        ItemSeparatorComponent={({item}) => {
+          if (seperatorComponent) {
+            return seperatorComponent;
+          }
+        }}
         renderItem={({item, index}) => {
           return (
             <BlockImage
               key={index}
               properties={item}
-              height={height / 1.6}
-              width={width}
+              imageStyle={imageStyle}
+              height={height ? height : 200}
+              width={width ? width : 200}
               navigation={navigation}
             />
           );
         }}
       />
-      <BottomSlider
-        key={key}
-        setKey={setKey}
-        style={{marginTop: 10, alignSelf: 'center'}}
-        listRef={listRef}
-        list={list}
-      />
+      {list.length > 1 && animated && (
+        <BottomSlider
+          key={key}
+          setKey={setKey}
+          style={{marginTop: 10, alignSelf: 'center'}}
+          listRef={listRef}
+          list={list}
+        />
+      )}
     </View>
   );
 };

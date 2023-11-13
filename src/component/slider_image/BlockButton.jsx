@@ -3,14 +3,13 @@ import {Pressable, Text, StyleSheet} from 'react-native';
 export default BlockButton = ({properties, navigation}) => {
   const styles = StyleSheet.create({
     blockButton: {
-      borderColor: '#fff',
       height: 50,
-      width: 200,
+      backgroundColor: 'rgba(178, 190, 181, 0.4)',
       alignItems: 'center',
       justifyContent: 'center',
-      borderWidth: 3,
+      paddingHorizontal: 25,
       marginBottom: 15,
-      borderRadius: 5,
+      borderRadius: 10,
     },
     blockButtonText: {
       color: '#fff',

@@ -130,4 +130,26 @@ export const English = {
   THERAPY_CONSULTATION: 'Therapy Consultation',
   DIAGNOSTIC_TESTS: 'Diagnostic Tests',
   STORE_ORDERS: 'Store Orders',
+
+  //HOME
+  GOAL_SECTION_HEADER: 'Goal - Based Programs',
+  GOAL_SECTION_SUBHEADER:
+    'Everything you need to stay inspired & stay on top of your game',
+  BLOG_SECTION_HEADER: 'The Cult Of Whole Truth',
+  PEOPLE_SECTION_HEADER: 'People Of Cult',
+  RECIPE_SECTION_HEADER: 'DIY Diwali Party Recipes',
+  FIT_EDIT: 'Fit.edit',
+  LOSE_WEIGHT: 'Lose Weight',
+  NUTRITION: 'Nutirition',
+  APPAREL: 'Apparel',
+  DUMBBELL: 'Dumbbell',
+  TREADMILL: 'Treadmill',
+  SHOES: 'Shoes',
+
+  BOOK_CLASS: 'book a cult class',
+  VIEW_GYMS: 'view all gyms',
+  WORKOUT_AT_HOME: 'workout at home',
+  BUY_SPORTS_WEAR: 'buy sports wear',
+  PLAY_SPORTS: 'play sports',
+  WEIGHT_LOSS: 'weight loss',
 };
