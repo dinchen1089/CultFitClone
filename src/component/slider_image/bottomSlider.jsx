@@ -22,10 +22,10 @@ export const BottomSlider = ({setKey, listRef, list}) => {
             delay: index * 6000,
             useNativeDriver: false,
           }).start(() => {
-            listRef.current.scrollToIndex({
-              index: (index + 1) % list.length,
-              animated: true,
-            });
+            // listRef.current.scrollToIndex({
+            //   index: (index + 1) % list.length,
+            //   animated: true,
+            // });
             if (index === list.length - 1) {
               //do something to restart the animation. Remount??
               setKey(prev => prev + 1);

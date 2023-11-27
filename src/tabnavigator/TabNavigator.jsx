@@ -14,9 +14,22 @@ import StoreIcon from '../icons/StoreIcon';
 
 import ROUTES from '../LocaleData/routes';
 
+import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
+
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  const HiddenNavBarScreens = ['StoreNavigator'];
+
+  const HideBottomNavBar = route => {
+    console.log(route);
+    const routeName = getFocusedRouteNameFromRoute(route) ?? '';
+    console.log(routeName, HiddenNavBarScreens.includes(routeName));
+    if (HiddenNavBarScreens.includes(routeName)) {
+      return {display: 'none'};
+    }
+    return;
+  };
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -50,7 +63,13 @@ const TabNavigator = () => {
       <Tab.Screen name={ROUTES.HOME} component={Home} />
       <Tab.Screen name={ROUTES.FITNESS} component={Fitness} />
       <Tab.Screen name={ROUTES.SPORTS} component={Sports} />
-      <Tab.Screen name={ROUTES.STORE} component={Store} />
+      <Tab.Screen
+        name={ROUTES.STORE}
+        component={Store}
+        options={({route}) => ({
+          tabBarStyle: {display: 'none'},
+        })}
+      />
       <Tab.Screen name={ROUTES.SOCIAL} component={Social} />
     </Tab.Navigator>
   );
