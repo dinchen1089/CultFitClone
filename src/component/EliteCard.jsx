@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-import StarIcon from '../icons/Start';
+import HollowStar from '../icons/HollowStar';
 import {eliteData} from '../component_data/storeScreenData';
 
 export default function EliteCard() {
@@ -15,7 +15,7 @@ export default function EliteCard() {
         borderRadius: 10,
       }}>
       <View style={{marginRight: 10}}>
-        <StarIcon style={styles.iconStyle} />
+        <HollowStar style={styles.iconStyle} />
         <Text style={styles.typeText}>{eliteData.type}</Text>
       </View>
       <View style={{flex: 1, marginRight: 36}}>

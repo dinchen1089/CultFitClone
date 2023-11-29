@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {
   Dimensions,
+  Pressable,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -12,6 +13,7 @@ import IconTextComponent from '../component/IconTextComponent';
 import PressableImageTextCard from '../component/PressableImageTextCard';
 import WeightUpdate from '../component/WeightUpdate';
 import {
+  AllReviews,
   Steps,
   additionalBenefits,
   bookingInfo,
@@ -24,6 +26,9 @@ import WeeklyActivitesReport from '../component/WeeklyActivitesReport';
 import {weekActivities} from '../component_data/storeScreenData';
 import CheckCircleIcon from '../icons/CheckCircleIcon';
 import EliteCard from '../component/EliteCard';
+import StarIcon from '../icons/Star';
+import ReviewCard from '../component/ReviewCard';
+import FAQ from '../component/FAQ';
 
 const Social = () => {
   const {width, height} = Dimensions.get('window');
@@ -201,6 +206,74 @@ const Social = () => {
           ))}
         </View>
         <EliteCard />
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            margin: 10,
+            flex: 1,
+          }}>
+          <Text
+            style={{
+              fontSize: 20,
+              color: 'white',
+              fontWeight: '600',
+              marginRight: 5,
+            }}>
+            {AllReviews.rating}
+          </Text>
+          <StarIcon style={{color: '#FFC000', marginRight: 5}}></StarIcon>
+          <Text
+            style={{
+              fontSize: 20,
+              color: 'white',
+              marginRight: 5,
+              fontWeight: '600',
+            }}>{`(${AllReviews.totalReviews}+)`}</Text>
+          <View
+            style={{
+              height: 5,
+              width: 5,
+              borderRadius: 100,
+              backgroundColor: 'white',
+              marginRight: 5,
+            }}></View>
+          <Text
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={{
+              fontSize: 20,
+              color: 'white',
+              fontWeight: '600',
+              flex: 1,
+            }}>
+            {AllReviews.forum}
+          </Text>
+        </View>
+
+        <FlatList
+          data={AllReviews.comments}
+          horizontal
+          keyExtractor={item => item.id}
+          renderItem={({item}) => <ReviewCard item={item} />}
+          showsHorizontalScrollIndicator={false}
+        />
+
+        <Pressable
+          style={{
+            margin: 10,
+            flex: 1,
+            padding: 10,
+            backgroundColor: 'rgba(128,128,128,.4)',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: 10,
+          }}>
+          <Text style={{color: 'white', fontSize: 20, fontWeight: '500'}}>
+            VIEW MORE REVIEWS
+          </Text>
+        </Pressable>
+        <FAQ />
       </View>
     );
   };

@@ -196,3 +196,104 @@ export const eliteData = {
   subHeader:
     'Additional 6 weeks extension on top of your existing Elite membership',
 };
+
+export const AllReviews = {
+  rating: 4.9,
+  totalReviews: 435,
+  forum: 'Google Review',
+  comments: [
+    {
+      id: 'comments-1',
+      name: 'Utkarsh Sahay',
+      rating: '5.0',
+      imagePath: require('../images/social_images/afterutk.png'),
+      reviewDate: 7,
+      description:
+        'Esse aliquip consectetur ipsum elit excepteur nulla in sit ex occaecat enim officia enim ea. Proident enim sit in veniam et pariatur tempor officia mollit non commodo. Incididunt do laboris veniam elit quis est dolore ipsum incididunt labore incididunt pariatur dolore ea. Reprehenderit exercitation sint cupidatat non exercitation minim aliqua Lorem proident occaecat. Pariatur velit pariatur duis amet aliquip excepteur amet consectetur. Dolor ad mollit tempor non do deserunt duis ad id.',
+    },
+    {
+      id: 'comments-2',
+      name: 'Dinchen Tamang',
+      rating: '5.0',
+      imagePath: null,
+      reviewDate: 8,
+      description:
+        'Exercitation nisi elit quis velit nisi cillum irure amet anim deserunt ad. Laborum tempor velit duis anim duis ullamco fugiat ea consequat ea consectetur anim. Velit sunt dolor amet consequat. Minim qui minim Lorem ex enim dolor laboris aute laborum occaecat.',
+    },
+    {
+      id: 'comments-3',
+      name: 'Rigen Tamang',
+      rating: '5.0',
+      imagePath: null,
+      reviewDate: 8,
+      description:
+        'Excepteur dolor esse labore exercitation sit consequat est ad consequat voluptate. Quis cillum irure proident laboris ex. Sunt incididunt commodo officia velit. Aute cupidatat duis ut fugiat aliqua proident nostrud qui irure magna duis ipsum nisi do.',
+    },
+    {
+      id: 'comments-4',
+      name: 'Lakshana Sherpa',
+      rating: '5.0',
+      imagePath: null,
+      reviewDate: 8,
+      description:
+        'Excepteur amet est pariatur pariatur esse consequat consequat ad et in enim qui. Consectetur exercitation exercitation ut veniam sint sunt aliqua cupidatat eu sunt velit ut cillum. Officia officia mollit incididunt id. Excepteur do eiusmod non voluptate aliquip veniam ex qui sunt excepteur occaecat.',
+    },
+  ],
+};
+
+export const bootCampFAQs = {
+  title: 'FAQs',
+  faqs: [
+    {
+      question: 'How is Cult Bootcamp different from Cultpass Elite?',
+      answer:
+        'This program focuses on 4 main elements to ensure that everyone reaches their weight loss goal in a super-efficient way. 1) Nutrition Each one of you will be assigned a nutritionist a week before the program kickstarts. The nutritionist will then check in with you every week to discuss what’s working/what’s not and alter your plan accordingly. Your nutritionist will also ask you to share your meals on a daily basis via WhatsApp to keep you on track. 2) Fitness Coach You will have one fitness throughout the 6 weeks of the program who will conduct your group workouts, correct your posture, check in your progress and build your base. All of our workouts are designed to help you lose weight and are different from a regular cult session. I’ve also included a ton of fun group activities and games to the program so there’s never a dull day! But that’s not all. We’ve designed online workouts and step challenges to keep you active and consistent even on days you don’t have an in-center session. 3) Workshops & maintenance plans  The program includes 5 online workshops every Saturday, led by our master trainers & experts on Nutrition, Mindfulness, Movements, Dance & Yoga. After the bootcamp is over, each of you will be given a comprehensive & easy-to-follow maintenance plan to help you retain the weight you lost during these 6 weeks. 4) Community Every Bootcamp batch will be conducted with a small group of people, all of whom have a goal similar to yours & are willing to give it their all. This also means that you get to go on a transformative journey with them by your side, getting inspired and inspiring each other in turn. We’ll also keep you all connected over a WhatsApp group where you can push one other to hit your goals!',
+      id: 'question-1',
+      serialNo: '01',
+    },
+    {
+      question:
+        'What happens if I miss some class(es) because of travel or other commitments?',
+      answer:
+        'In case you are travelling please do inform the coach beforehand so, that he/she can share a workout plan that you can do from anywhere. ',
+      id: 'question-2',
+      serialNo: '02',
+    },
+    {
+      question: 'Can I cancel / refund my Bootcamp memberships?',
+      answer:
+        'No, there shall not be any cancellations or refunds, once you have purchased the Bootcamp membership.',
+      id: 'question-3',
+      serialNo: '03',
+    },
+    {
+      question: 'Can I be a part of bootcamp if I have any medical issues?',
+      answer:
+        'For Lifestyle conditions such as Type 2 Diabetes, Hypothyroidism, hypertension, PCOS/PCOD, Hyperuricemia (high uric acid), Gut related issues such as GERD/ Acid reflux, Irritable bowel syndrome, Inflammatory bowel disease, you can join the bootcamp program, however, we would require a Go-ahead certificate from your physician to do the activities and follow the diet we prescribe in this program. For clinical conditions such as Cancer, Autoimmune disorders, Kidney related diseases, we may not be able to help you get better or manage with the condition, as our program is designed to lose weight. If you have already bought the membership, please reach out to the bootcamp team for further details.',
+      id: 'question-4',
+      serialNo: '04',
+    },
+    {
+      question: 'How do I ensure maximum results?',
+      answer:
+        "Consistency is the key here!  ✅ Maintain at least 80% attendance ✅ 7000 steps daily ✅ Share 2 images of your meals daily with your nutritionist They'll guide and support you in your journey of being better every day, but your commitment and dedication is the game changer!",
+      id: 'question-5',
+      serialNo: '05',
+    },
+    {
+      question:
+        'Will I have the same trainer or nutritionist throughout the weight loss program?',
+      answer:
+        "Absolutely! You'll have the same coach throughout your journey. In case there are changes citing a personal emergency or operational requirements that result in changes in the assigned coach, the newly assigned coach will be equally qualified and experienced to support you with your transformation journey - we promise!",
+      id: 'question-6',
+      serialNo: '06',
+    },
+    {
+      question: 'What happens if the Bootcamp dates are modified/cancelled?',
+      answer:
+        'In such cases, we will communicate any changes in advance and provide alternatives or refunds, if applicable.',
+      id: 'question-7',
+      serialNo: '07',
+    },
+  ],
+};
